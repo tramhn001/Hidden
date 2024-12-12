@@ -1,6 +1,12 @@
 def hidden(matrix, n):
-    # Your implementation here!
-    pass
+    letters = []
+    i = 0
+    for row in matrix:
+        for letter in row:
+            if i % n == 0:
+                letters.append(letter)
+            i += 1
+    return ''.join(letters)
 
 matrix_1 = (
     ('u','e','r','e', ' ', 'e'),
