@@ -1,6 +1,29 @@
 def hidden(matrix, n):
     # Your implementation here!
-    pass
+    # Flaten the matrix into new list
+    # Using list comprehension
+    # new_list = [letter for rows in matrix for letter in rows]
+    # # new_list = []
+    # # for rows in matrix:
+    # #     for letter in rows:
+    # #         new_list.append(letter)
+     
+    # # Iterate to add the nth element from the new list to the outcome, return outcome
+    # result = ""
+    # for i in range(len(new_list)):
+    #     if i % n == 0:
+    #         result += new_list[i]
+    # return result 
+
+    result = ""
+    count = 0
+
+    for rows in matrix:
+        for letter in rows:
+            if count % n == 0:
+                result += letter
+            count += 1
+    return result
 
 matrix_1 = (
     ('u','e','r','e', ' ', 'e'),
